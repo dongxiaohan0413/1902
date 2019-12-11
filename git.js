@@ -9,6 +9,12 @@ let server = http.createServer((req,res)=> {
     res.end("hello,world")
 })
 
+// 这是监听一个事件
+server.on('request',(req,res)=> {
+    console.log("hello,world")
+})
+
+
 // 第一次修改
 server.listen(8080);
 
